@@ -1,6 +1,6 @@
 # Zillow Regression Project
 
-### Author George Arredondo
+### Author George Arredondo and Brandon Martinez
 
 ## Description:
 You are a junior data scientist on the Zillow data science team and recieve the following email in your inbox:
