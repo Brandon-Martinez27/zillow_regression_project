@@ -11,7 +11,7 @@ def acquire_and_prep_data():
 
     # Dropping missing data
     df = df.dropna()
-    
+
     # Changing some data types as integers instead of floats
     df['bedroomcnt'] = df['bedroomcnt'].astype(int)
     df['calculatedfinishedsquarefeet'] = df['calculatedfinishedsquarefeet'].astype(int)
@@ -20,6 +20,9 @@ def acquire_and_prep_data():
     df['yearbuilt']=df['yearbuilt'].astype(int)
 
     # Renaming columns to read easier
-    df = df.rename(columns={'calculatedfinishedcalcsquarefeet': 'sqft', 'regionidzip': 'zipcode'})
+    df = df.rename(columns={'calculatedfinishedsquarefeet': 'sqft', 'regionidzip': 'zipcode'})
+
+    # Adding tax rate
+    df['tax_rate'] = round((df['taxamount'] / df['taxvaluedollarcnt']) * 100 , 2)
 
     return df
