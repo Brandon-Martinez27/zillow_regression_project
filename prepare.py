@@ -1,6 +1,15 @@
 import pandas as pd
 import acquire_g
 
+# Alias for fips
+    def fips_labels(x):
+    if x['fips'] == 6037:
+        return 'Los Angeles County'
+    elif x['fips'] == 6059:
+        return 'Orange County'
+    elif x['fips'] == 6111:
+        return 'Ventura County'
+
 # Creating an acquire prep data function to clean and prep the paramaters that we will be using
 def acquire_and_prep_data():
     # Using the get_zillow_data function to acquire
@@ -24,5 +33,11 @@ def acquire_and_prep_data():
 
     # Adding tax rate
     df['tax_rate'] = round((df['taxamount'] / df['taxvaluedollarcnt']) * 100 , 2)
+
+    # Adding county from the function created above
+    df['county'] = df.apply(lambda x: fips_labels(x), axis=1)
+
+    # dropping fips now since I have the county
+    df = df.drop(columns = ['fips'])
 
     return df
