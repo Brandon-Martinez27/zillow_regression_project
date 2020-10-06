@@ -2,7 +2,7 @@ import pandas as pd
 import acquire_g
 
 # Alias for fips
-    def fips_labels(x):
+def fips_labels(x):
     if x['fips'] == 6037:
         return 'Los Angeles County'
     elif x['fips'] == 6059:
