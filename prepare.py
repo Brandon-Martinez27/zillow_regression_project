@@ -30,11 +30,11 @@ def acquire_and_prep_data():
     df['fips'] = df['fips'].astype(int)
     df['yearbuilt']=df['yearbuilt'].astype(int)
 
-    # Renaming columns to read easier
-    df = df.rename(columns={'calculatedfinishedsquarefeet': 'sqft', 'regionidzip': 'zipcode'})
-
     # Adding tax rate
     df['tax_rate'] = round((df['taxamount'] / df['taxvaluedollarcnt']) * 100 , 2)
+
+    # Renaming columns to read easier
+    df = df.rename(columns={'calculatedfinishedsquarefeet': 'sqft', 'regionidzip': 'zip_code', 'taxvaluedollarcnt': 'home_value'})
 
     # Adding county from the function created above
     df['county'] = df.apply(lambda x: fips_labels(x), axis=1)
