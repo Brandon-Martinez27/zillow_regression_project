@@ -42,6 +42,12 @@ def acquire_and_prep_data():
     # dropping fips now since I have the county
     df = df.drop(columns = ['fips'])
 
+    # Going to only look at homes with 5 or less bedrooms
+    df = df[df.bedroomcnt < 6]
+
+    # Going to only look at homes with 4 or less bathrooms
+    df = df[df.bathroomcnt < 5]
+
     return df
 
     # Function to split data into train, validate, test datasets
