@@ -36,16 +36,23 @@ def prep_zillow(cached=True):
     # rename columns for easy reading
     df = df.rename(columns={
     'regionidzip': 'zipcode',
-    'calculatedfinishedsquarefeet': 'sqft'})
+    'calculatedfinishedsquarefeet': 'sqft',
+    'taxvaluedollarcnt': 'home_value'})
 
     # Adding county from the function created above
     df['county'] = df.apply(lambda x: fips_labels(x), axis=1)
 
     # Adding tax rate
-    df['tax_rate'] = round((df['taxamount'] / df['taxvaluedollarcnt']) * 100 , 2)
+    df['tax_rate'] = round((df['taxamount'] / df['home_value']) * 100 , 2)
 
     # dropping fips now since I have the county
     df = df.drop(columns = ['fips'])
+
+    # Going to only look at homes with 5 or less bedrooms
+    df = df[df.bedroomcnt < 6]
+
+    # Going to only look at homes with 4 or less bathrooms
+    df = df[df.bathroomcnt < 5]
     
     return df
 
