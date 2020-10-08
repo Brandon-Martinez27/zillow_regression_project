@@ -45,9 +45,9 @@ The data should have the tax amounts and tax value of the home, so it shouldn't 
 | home_value | Value of the property |
 
 ## Inital Hypothesis & Thoughts
-- $H_{0}$: There is no relationship between home values and the number of bedrooms, bathrooms and square feet.
+> H<sub>0</sub>: There is no relationship between home values and the number of bedrooms, bathrooms and square feet.
 
-- $H_{a}$: There is a relationship between home values and the number of bedrooms, bathrooms and square feet.
+> H<sub>a</sub>: There is a relationship between home values and the number of bedrooms, bathrooms and square feet.
 
 ## Project Planning
 
