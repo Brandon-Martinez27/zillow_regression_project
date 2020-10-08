@@ -24,7 +24,7 @@ def prep_zillow(cached=True):
     df = get_zillow_data(cached)
 
     # choose columns that we want to use (features and target)
-    df = df[['bathroomcnt', 'bedroomcnt', 'regionidzip', 'fips', 'taxamount', 'taxvaluedollarcnt', 'yearbuilt', 'calculatedfinishedsquarefeet']]
+    df = df[['fullbathcnt', 'bathroomcnt', 'bedroomcnt', 'regionidzip', 'fips', 'taxamount', 'taxvaluedollarcnt', 'yearbuilt', 'calculatedfinishedsquarefeet']]
 
     # drop null columns
     df = df.dropna()
