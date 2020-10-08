@@ -5,7 +5,7 @@
 ## Description:
 We have been tasked by the Zillow Data Science team to predict single unit property tax assessment value.
 
-## [Presentation](https://www.canva.com/design/DAEKBO5FrUg/share/preview?token=dlLZoS3lS9x_ruYsoCnYQQ&role=EDITOR&utm_content=DAEKBO5FrUg&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
+## [Presentation](https://www.canva.com/design/DAEKBO5FrUg/NvIqX7_-xilPgd9kkT_mgw/view?utm_content=DAEKBO5FrUg&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
 ## Goals
 - Predict values of single unit properties using property data from the Zillow database on the Codeup SQL server. The focus will be specifically on the property values on the hot months of May & June 2017.
