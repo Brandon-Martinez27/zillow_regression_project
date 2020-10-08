@@ -43,6 +43,7 @@ The data should have the tax amounts and tax value of the home, so it shouldn't 
 
 ## Inital Hypothesis & Thoughts
 > $H_{0}$: There is no relationship between home values and the number of bedrooms, bathrooms and square feet.
+
 >$H_{a}$: There is a relationship between home values and the number of bedrooms, bathrooms and square feet.
 
 ## Project Planning
@@ -66,7 +67,7 @@ The data should have the tax amounts and tax value of the home, so it shouldn't 
 - Compute SSE, RMSE, & MSE (plotting y by yhat)
 - Create model.py that has functions to fit, predict, evaluate, the final model of the test settling
 
-### Conclusion
+### Conclusions
 - We found that square footage, bedroom count and bathroom count are drivers for market value of single unit properties
 - Polynomial model performed 24% better than the baseline with the drivers described above
 - The properties are located in southern California in Los Angeles County, Orange County and Ventura County
@@ -77,4 +78,4 @@ The data should have the tax amounts and tax value of the home, so it shouldn't 
 - Use functions in acquire.py file to acquire data
     * Must have env file for Codeup SQL credentials 
 - Use functions in prepare.py for data prepartion
-- Use function model.py to model
+- Use functions model.py to model
