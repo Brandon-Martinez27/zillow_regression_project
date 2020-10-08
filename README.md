@@ -5,7 +5,7 @@
 ## Description:
 We have been tasked by the zillow data science team to predict single unit property tax assessment value.
 
-## Presentation [Link]
+## Presentation [https://docs.google.com/presentation/d/1XwEc7GxdozKnsY7TqcAs4Y_XU2s4Ca3u8k2RCIxQwG4/edit?ts=5f7e0736#slide=id.p]
 
 ## Goals
 - Predict values of single unit properties using property data from the Zillow database on the Codeup SQL server. The focus will be specifically on the property values on the hot months of May & June 2017.
@@ -24,6 +24,9 @@ The data should have the tax amounts and tax value of the home, so it shouldn't 
 > Note that this is separate from the model you will build, because if you use tax amount in your model, you would be using a future data point to predict a future data point, and that is cheating! In other words, for prediction purposes, we won't know tax amount until we know tax value.
 
 ## Key Terms
+- [Parcelid] (https://en.wikipedia.org/wiki/Assessor%27s_parcel_number) is a number assigned to parcels of real property by the tax assessor of a particular jurisdiction for purposes of identification and record-keeping.
+- A [single-unit property] (https://help.rentingwell.com/article/multi-unit-vs-single-unit/) is a rental property that is rented as a single entity. A condo, a townhouse, or a vacation rental would typically be single-unit properties. If you’re adding a single-unit property to Renting Well you don’t need to add individual units – the tenant and lease are associated to the property itself.
+- [FIPS] (www.fcc.gov › oet › info › maps › census › fips › fips) codes are numbers which uniquely identify geographic areas. The number of digits in FIPS codes vary depending on the level of geography. State-level FIPS codes have two digits, county-level FIPS codes have five digits of which the first two are the FIPS code of the state to which the county belongs.
 
 ## Data Dictionary
 | Feature | Definition |
@@ -47,15 +50,18 @@ The data should have the tax amounts and tax value of the home, so it shouldn't 
 >$H_{a}$: There is a relationship between home values and the number of bedrooms, bathrooms and square feet.
 
 ## Project Planning
+
 ### Acquire
 - Create an acquire.py file that contains functions to establish a connection and get the data from the Codeup SQL database.
 - ENV file is needed for credentials to access the database
+
 ### Prepare
 - Create a prepare.py file that contains functions to prepare, explore, and split the data. 
 - Null values are dropped
 - Data types are adjusted to get ready for modeling
 - Features are selected and renamed
 - Filters are selected to remove outliers
+
 ### Explore
 - Variables are visualized
 - Statistical tests performed to confirm inital hypothesis
