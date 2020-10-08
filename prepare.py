@@ -18,7 +18,7 @@ def acquire_and_prep_data():
     df = acquire_g.get_zillow_data()
 
     # Selecting the parameters for exploring
-    df = df[['calculatedfinishedsquarefeet','bathroomcnt', 'bedroomcnt', 'regionidzip', 'fips', 'taxamount', 'taxvaluedollarcnt', 'yearbuilt']]
+    df = df[['fullbathcnt','calculatedfinishedsquarefeet','bathroomcnt', 'bedroomcnt', 'regionidzip', 'fips', 'taxamount', 'taxvaluedollarcnt', 'yearbuilt']]
 
     # Dropping missing data
     df = df.dropna()
