@@ -3,7 +3,7 @@
 ### Author George Arredondo and Brandon Martinez
 
 ## Description:
-We have been tasked by the zillow data science team to predict single unit property tax assessment value.
+We have been tasked by the Zillow Data Science team to predict single unit property tax assessment value.
 
 ## [Presentation](https://docs.google.com/presentation/d/1XwEc7GxdozKnsY7TqcAs4Y_XU2s4Ca3u8k2RCIxQwG4/edit?ts=5f7e0736#slide=id.p)
 
@@ -45,9 +45,9 @@ The data should have the tax amounts and tax value of the home, so it shouldn't 
 | home_value | Value of the property |
 
 ## Inital Hypothesis & Thoughts
-> $H_{0}$: There is no relationship between home values and the number of bedrooms, bathrooms and square feet.
+- $H_{0}$: There is no relationship between home values and the number of bedrooms, bathrooms and square feet.
 
->$H_{a}$: There is a relationship between home values and the number of bedrooms, bathrooms and square feet.
+- $H_{a}$: There is a relationship between home values and the number of bedrooms, bathrooms and square feet.
 
 ## Project Planning
 
